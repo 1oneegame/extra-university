@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function AboutUniversity(){
     return(
-        <div className="max-w-screen min-h-screen">
-            <div className="flex flex-col justify-center items-center pt-20">
-                <div className="text-5xl font-bold">
+        <div className="w-full min-h-screen">
+            <div className="flex flex-col justify-center items-center pt-20 px-4">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                     <h1 className="text-black">«<span className="text-blue-500">Extra University</span>» – это больше, чем просто ВУЗ</h1>
                 </div>
-                <div className="flex flex-row gap-4 justify-center items-center mt-12">
-                    <div className="bg-blue-500 text-white shadow-md rounded-lg w-[37%] px-10 py-6 border-1 text-xl font-normal">
+                <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12 w-full max-w-6xl">
+                    <div className="bg-blue-500 text-white shadow-md rounded-lg w-full md:w-1/2 px-6 md:px-10 py-6 text-lg md:text-xl font-normal">
                         <p>
                             Мы создаём сообщество 
                             единомышленников, где каждый 
@@ -17,7 +17,7 @@ export default function AboutUniversity(){
                             воплотить свои идеи в жизнь.
                         </p>
                     </div>
-                    <div className="bg-white text-black shadow-md shadow-blue-300 rounded-lg w-[37%] px-10 py-6 border-1 text-xl font-normal">
+                    <div className="bg-white text-black shadow-md shadow-blue-300 rounded-lg w-full md:w-1/2 px-6 md:px-10 py-6 text-lg md:text-xl font-normal">
                         <p>
                             <span className="font-bold">Наша миссия</span> – прививать любовь 
                             к знаниям, развивать практический
@@ -26,12 +26,12 @@ export default function AboutUniversity(){
                         </p>
                     </div>
                 </div>
-                <div className="border-1 shadow-lg shadow-blue-200 rounded-lg w-[75%] my-12 flex flex-row gap-8">
-                    <div className="ml-8">
+                <div className="border-1 shadow-lg shadow-blue-200 rounded-lg w-full max-w-6xl my-12 flex flex-col md:flex-row gap-8 p-4 md:p-8">
+                    <div className="flex justify-center md:justify-start">
                         <Image className="scale-110 mb-6" src="assets/images/student.svg" width="283" height="415" alt="student"/>
                     </div>
-                    <div className="flex flex-col justify-between py-12 ml-4">
-                        <h1 className="text-8xl font-bold text-black">
+                    <div className="flex flex-col justify-between py-6 md:py-12">
+                        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-black">
                             Найдите вашу <br />
                             программу
                         </h1>
@@ -39,9 +39,9 @@ export default function AboutUniversity(){
                             <input 
                                 type="text" 
                                 placeholder="Поиск академических программ..."
-                                className="w-[100%] px-6 py-4 text-lg border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-6 py-4 text-lg border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
-                            <button className="absolute right-[2%] top-1/2 transform -translate-y-1/2 p-2 text-gray-500 hover:text-blue-500 cursor-pointer hover:scale-105 transition-all duration-500">
+                            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-gray-500 hover:text-blue-500 cursor-pointer hover:scale-105 transition-all duration-500">
                                 <Search />
                             </button>
                         </div>

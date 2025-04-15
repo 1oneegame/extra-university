@@ -1,11 +1,29 @@
 'use client'
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 export default function Hero(){
     return(
-        <div id="hero" className="flex flex-col max-w-screen bg-white mt-[70px] sm:mt-[80px] md:mt-[100px]">
-            <div className="mt-48 text-4xl sm:text-6xl md:text-8xl lg:text-9xl flex flex-col justify-center items-center font-bold px-4 text-center">
-                <h1>Extra University:</h1>
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            id="hero" 
+            className="flex flex-col max-w-screen bg-white mt-[70px] sm:mt-[80px] md:mt-[100px]"
+        >
+            <motion.div 
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="mt-48 text-4xl sm:text-6xl md:text-8xl lg:text-9xl flex flex-col justify-center items-center font-bold px-4 text-center"
+            >
+                <motion.h1
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Extra University:
+                </motion.h1>
                 <TypeAnimation
                     sequence={[
                         'Традиции...',
@@ -20,11 +38,26 @@ export default function Hero(){
                     className="text-blue-500"
                     repeat={Infinity}
                 />
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 sm:mt-8 md:mt-12 px-4">
-                <button className="w-full sm:w-auto text-lg sm:text-2xl text-medium px-6 py-4 shadow-md bg-blue-500 border-1 text-white rounded-lg cursor-pointer scale-95 hover:scale-105 transition-all duration-500">Получить консультацию</button>
-                <button className="w-full sm:w-auto text-lg sm:text-2xl text-medium px-6 py-4 shadow-md shadow-blue-300 border-1 rounded-lg text-blue-500 cursor-pointer scale-95 hover:scale-105 transition-all duration-500">Узнать подробнее</button>
-            </div>
-        </div>
+            </motion.div>
+            <motion.div 
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 sm:mt-8 md:mt-12 px-4"
+            >
+                <motion.button 
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-auto text-lg sm:text-2xl text-medium px-6 py-4 shadow-md hover:scale-105 bg-blue-500 border-1 text-white rounded-lg cursor-pointer transition-all duration-300"
+                >
+                    Получить консультацию
+                </motion.button>
+                <motion.button 
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-auto text-lg sm:text-2xl text-medium px-6 py-4 shadow-md hover:scale-105 shadow-blue-300 border-1 rounded-lg text-blue-500 cursor-pointer transition-all duration-300"
+                >
+                    Узнать подробнее
+                </motion.button>
+            </motion.div>
+        </motion.div>
     );
 }

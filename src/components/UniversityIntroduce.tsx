@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function UniversityIntroduce(){
     return(
-        <div className="w-full mt-48 ">
+        <div id='introduce' className="w-full mt-48 ">
             <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 justify-center items-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center px-4">
                     <h1>Познакомься с <span className="text-blue-500">Extra University</span></h1>

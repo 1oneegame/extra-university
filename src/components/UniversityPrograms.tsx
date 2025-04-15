@@ -26,7 +26,7 @@ export default function UniversityPrograms() {
     ];
 
     return (
-        <div className="w-full mt-48 ">
+        <div id="programs" className="w-full mt-48 ">
             <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 justify-center items-center px-4 md:px-8 lg:px-16">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                     <h1>Получи образование в <span className="text-blue-500">Extra University</span></h1>

@@ -7,41 +7,57 @@ import { Menu, X } from "lucide-react";
 interface NavbarItem{
     title: string;
     link: string;
+    sectionId?: string;
 }
 
 const NavbarItems : NavbarItem[] = [
     {
         title: 'О нас',
-        link: '/'
+        link: '/#hero',
+        sectionId: 'hero'
     },
     {
         title: 'Поступление',
-        link: '/'
+        link: '/#about',
+        sectionId: 'about'
     },
     {
         title: 'Программы',
-        link: '/'
+        link: '/#programs',
+        sectionId: 'programs'
     },
     {
         title: 'Преподаватели',
-        link: '/'
+        link: '/#professors',
+        sectionId: 'professors'
     },
     {
         title: 'Новости',
-        link: '/'
+        link: '/#news',
+        sectionId: 'news'
     },
     {
         title: 'Университет',
-        link: '/'
+        link: '/#introduce',
+        sectionId: 'introduce'
     },
     {
         title: 'Контакты',
-        link: '/'
+        link: '/',
+        sectionId: 'contact'
     },
 ]
 
 export default function Navbar(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsMenuOpen(false);
+        }
+    };
 
     return(
         <div className="fixed top-0 left-0 right-0 z-10 flex flex-row px-4 sm:px-8 md:px-12 bg-white rounded-xl shadow-md shadow-blue-200 h-[70px] sm:h-[80px] md:h-[100px] justify-between items-center">
@@ -62,11 +78,12 @@ export default function Navbar(){
                 {
                     NavbarItems.map((item, index) => (
                         <div key={index}> 
-                            <Link href={item.link}>
-                                <span className="text-gray-800 text-sm sm:text-base md:text-lg hover:text-blue-500 transition-all duration-300">
-                                    {item.title}
-                                </span>
-                            </Link>
+                            <button
+                                onClick={() => item.sectionId && scrollToSection(item.sectionId)}
+                                className="text-gray-800 text-sm sm:text-base md:text-lg hover:text-blue-500 transition-all duration-300"
+                            >
+                                {item.title}
+                            </button>
                         </div>
                     ))
                 }
@@ -77,14 +94,13 @@ export default function Navbar(){
                 <div className="absolute top-[70px] sm:top-[80px] left-0 right-0 bg-white shadow-lg md:hidden">
                     <div className="flex flex-col p-4">
                         {NavbarItems.map((item, index) => (
-                            <Link 
+                            <button 
                                 key={index} 
-                                href={item.link}
-                                className="py-2 px-4 text-gray-800 hover:bg-blue-50 hover:text-blue-500 transition-all duration-300"
-                                onClick={() => setIsMenuOpen(false)}
+                                onClick={() => item.sectionId && scrollToSection(item.sectionId)}
+                                className="py-2 px-4 text-gray-800 hover:bg-blue-50 hover:text-blue-500 transition-all duration-300 text-left"
                             >
                                 {item.title}
-                            </Link>
+                            </button>
                         ))}
                     </div>
                 </div>

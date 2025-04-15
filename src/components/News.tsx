@@ -48,7 +48,7 @@ export default function News() {
   ];
 
   return (
-    <div className="container mt-48  mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div id="news" className="container mt-48  mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12">
         <div className="w-full">
             <div className='flex flex-row justify-center items-center'>

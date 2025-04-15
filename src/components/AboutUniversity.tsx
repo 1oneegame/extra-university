@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutUniversity(){
     return(
-        <div className="w-full">
+        <div id="about" className="w-full">
             <div className="flex flex-col justify-center items-center pt-52  px-4">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
                     <h1 className="text-black">«<span className="text-blue-500">Extra University</span>» – это больше, чем просто ВУЗ</h1>

@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero(){
     return(
-        <div className="flex flex-col max-w-screen bg-white mt-[70px] sm:mt-[80px] md:mt-[100px]">
+        <div id="hero" className="flex flex-col max-w-screen bg-white mt-[70px] sm:mt-[80px] md:mt-[100px]">
             <div className="mt-48 text-4xl sm:text-6xl md:text-8xl lg:text-9xl flex flex-col justify-center items-center font-bold px-4 text-center">
                 <h1>Extra University:</h1>
                 <TypeAnimation

@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <div className="w-full bg-blue-500 py-8 md:py-12">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
+        <div className="w-full bg-blue-500 py-6 sm:py-8 md:py-12 mt-48">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-12">
                 <div className="flex flex-col justify-center items-center md:items-start w-full md:w-auto">
                     <Image 
                         src="/assets/images/logo_footer.svg" 
                         alt="Extra University Logo" 
                         width={390} 
                         height={160}
-                        className="mb-4 md:mb-6 w-[250px] sm:w-[300px] md:w-[390px]"
+                        className="mb-4 md:mb-6 w-[200px] sm:w-[300px] md:w-[390px]"
                     />
-                    <p className="text-white text-base md:text-lg text-center md:text-left max-w-md">
+                    <p className="text-white text-sm sm:text-base md:text-lg text-center md:text-left max-w-md">
                         Присоединяйтесь к нашей программе и начните <br className="hidden md:block"/>уже сегодня писать свою историю успеха, в<br className="hidden md:block"/> которой знания превращаются в инновации, а<br className="hidden md:block"/> образование – в мощный инструмент для<br className="hidden md:block"/> достижения амбициозных целей.
                     </p>
                 </div>

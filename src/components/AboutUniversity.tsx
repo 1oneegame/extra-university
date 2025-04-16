@@ -67,7 +67,7 @@ export default function AboutUniversity(){
                         transition={{ duration: 0.8 }}
                         className="hidden md:flex justify-center md:justify-start relative"
                     >
-                        <Image className="scale-110 mb-6" src="assets/images/student.svg" width="283" height="415" alt="student" />
+                        <Image className="scale-118 mb-1.5" src="assets/images/student.svg" width="298" height="430" alt="student" />
                     </motion.div>
                     <motion.div 
                         initial={{ x: 50 }}

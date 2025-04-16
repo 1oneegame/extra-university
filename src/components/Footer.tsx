@@ -27,7 +27,7 @@ export default function Footer() {
                         placeholder="Ваш телефон:" 
                         className="w-full px-4 md:px-6 py-3 md:py-4 text-base md:text-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 bg-white"
                     />
-                    <button className="shadow-[0_0_25px_#00f7ff] cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-all duration-300">
+                    <button className="shadow-[0_10_25px_#00f7ff] cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-all duration-300">
                         Отправить
                     </button>
                 </div>

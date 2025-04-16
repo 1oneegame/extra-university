@@ -164,7 +164,7 @@ export default function Professors() {
                     whileTap={{ scale: 0.95 }}
                     className="hover:scale-105 w-full sm:w-auto text-base sm:text-lg md:text-xl font-medium text-white bg-blue-500 hover:bg-blue-600 transition-all duration-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-md"
                 >
-                    Подробнее об остальных сотрудников
+                    <a href="/teachers">Подробнее об остальных сотрудников</a>
                 </motion.button>
             </motion.div>
         </motion.div>

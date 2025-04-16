@@ -29,7 +29,7 @@ const NavbarItems : NavbarItem[] = [
     },
     {
         title: 'Преподаватели',
-        link: '/#professors',
+        link: '/teachers',
         sectionId: 'professors'
     },
     {

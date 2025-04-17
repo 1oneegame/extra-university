@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface NavbarItem{
     title: string;
@@ -14,51 +15,46 @@ interface NavbarItem{
 const NavbarItems : NavbarItem[] = [
     {
         title: 'О нас',
-        link: '/#hero',
+        link: '/about',
         sectionId: 'hero'
     },
     {
         title: 'Поступление',
-        link: '/#about',
+        link: '/admission',
         sectionId: 'about'
     },
     {
         title: 'Программы',
-        link: '/#programs',
+        link: '/programs',
         sectionId: 'programs'
     },
     {
         title: 'Преподаватели',
-        link: './teachers',
+        link: '/teachers',
         sectionId: 'professors'
     },
     {
         title: 'Новости',
-        link: '/#news',
+        link: '/news',
         sectionId: 'news'
     },
     {
         title: 'Университет',
-        link: '/#introduce',
+        link: '/university',
         sectionId: 'introduce'
     },
     {
         title: 'Контакты',
-        link: '/',
+        link: '/contacts',
         sectionId: 'contact'
     },
 ]
 
 export default function Navbar(){
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsMenuOpen(false);
-        }
-    };
+    const router = useRouter();
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
         <motion.div 
@@ -93,14 +89,15 @@ export default function Navbar(){
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: index * 0.1 }}
                         > 
-                            <motion.button
-                                whileHover={{ scale: 1.1, color: "#3B82F6" }}
-                                whileTap={{ scale: 0.95 }}
-                                onClick={() => item.sectionId && scrollToSection(item.sectionId)}
-                                className="text-gray-800 text-sm sm:text-base md:text-lg transition-all duration-300"
-                            >
-                                {item.title}
-                            </motion.button>
+                                <motion.button
+                                    whileHover={{ scale: 1.1, color: "#3B82F6" }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="text-gray-800 text-sm sm:text-base md:text-lg transition-all duration-300"
+                                >
+                                    <Link href={item.link}>
+                                    {item.title}
+                                    </Link>
+                                </motion.button>
                         </motion.div>
                     ))
                 }
@@ -117,18 +114,19 @@ export default function Navbar(){
                     >
                         <div className="flex flex-col p-4">
                             {NavbarItems.map((item, index) => (
-                                <motion.button 
-                                    key={index}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                                    whileHover={{ scale: 1.05, x: 10 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => item.sectionId && scrollToSection(item.sectionId)}
-                                    className="py-2 px-4 text-gray-800 hover:bg-blue-50 hover:text-blue-500 transition-all duration-300 text-left"
-                                >
-                                    {item.title}
-                                </motion.button>
+                                    <motion.button 
+                                        key={index}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                                        whileHover={{ scale: 1.05, x: 10 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="py-2 px-4 text-gray-800 hover:bg-blue-50 hover:text-blue-500 transition-all duration-300 text-left"
+                                    >
+                                        <Link href={item.link}>
+                                            {item.title}
+                                        </Link>
+                                    </motion.button>
                             ))}
                         </div>
                     </motion.div>

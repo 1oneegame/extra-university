@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 interface NavbarItem{
     title: string;
@@ -51,8 +50,6 @@ const NavbarItems : NavbarItem[] = [
 ]
 
 export default function Navbar(){
-
-    const router = useRouter();
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 

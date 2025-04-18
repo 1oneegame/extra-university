@@ -297,7 +297,7 @@ export default function AdmissionPage() {
                         ))}
                     </div>
                 </motion.div>
-            </div>
+        </div>
         </motion.div>
     );
 }

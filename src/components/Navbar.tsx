@@ -135,7 +135,6 @@ export default function Navbar(){
                                         transition={{ duration: 0.2 }}
                                     />
                                 )}
-                                <span className="absolute inset-0 rounded-md bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                             </Link>
                         );
                     })}
@@ -186,10 +185,10 @@ export default function Navbar(){
                                     >
                                         <Link 
                                             href={item.link}
-                                            className={`block py-2 px-4 rounded-md transition-colors duration-200
+                                            className={`block py-2 px-4 transition-colors duration-200
                                                 ${isActive 
-                                                    ? 'bg-blue-50 text-blue-600 font-medium' 
-                                                    : 'text-gray-700 hover:bg-gray-50'}`}
+                                                    ? 'text-blue-600 font-medium' 
+                                                    : 'text-gray-700 hover:text-blue-500'}`}
                                         >
                                             {item.title}
                                         </Link>

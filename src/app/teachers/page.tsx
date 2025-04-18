@@ -186,14 +186,13 @@ const teachers = [
 
 export default function TeachersPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 mt-20">
+    <div className="max-w-7xl mx-auto px-4 py-12 mt-20 flex flex-col items-center">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Наши преподаватели</h1>
-        <p className="text-lg text-gray-600">
-          В команде Extra University — лучшие эксперты в своих областях
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Наши преподаватели</h1>
+        <p className="text-lg md:text-2xl text-gray-600">
+          В команде <span className='text-blue-500 font-medium'>Extra University</span> — лучшие эксперты в своих областях
         </p>
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {teachers.map((t, i) => (
           <TeacherCard

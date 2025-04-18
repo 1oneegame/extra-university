@@ -11,7 +11,7 @@ type Props = {
 
 export const TeacherCard = ({ photo, name, position, description }: Props) => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 w-full max-w-xs">
+    <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300 w-full max-w-xs">
       <div className="w-40 h-40 mx-auto relative mb-4">
         <Image
           src={photo}

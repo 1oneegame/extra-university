@@ -73,7 +73,7 @@ export default function Professors() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             id="professors" 
-            className="w-full mt-48"
+            className="w-full mt-48 mb-20"
         >
             <div className="flex flex-col gap-6 sm:gap-8 md:gap-16 justify-center items-center px-4 md:px-8 lg:px-16">
                 <motion.div 

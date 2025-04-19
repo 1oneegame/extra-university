@@ -20,18 +20,20 @@ export default function Footer() {
                             Присоединяйтесь к нашей программе и начните уже сегодня писать свою историю успеха, в которой знания превращаются в инновации, а образование – в мощный инструмент для достижения амбициозных целей.
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
+                            {['instagram', 'telegram'].map((social) => (
                                 <Link 
                                     key={social} 
-                                    href={`https://${social}.com`} 
+                                    href={
+                                        social === 'instagram' ? 'https://www.instagram.com/extrauniversity' :
+                                        social === 'telegram' ? 'https://t.me/extrauniversity' :
+                                        '#'
+                                    } 
                                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                     aria-label={`${social} link`}
                                 >
                                     <span className="text-white text-xl">
-                                        {social === 'facebook' && 'f'}
-                                        {social === 'twitter' && 'X'}
+                                        {social === 'telegram' && 'TG'}
                                         {social === 'instagram' && 'IG'}
-                                        {social === 'linkedin' && 'in'}
                                     </span>
                                 </Link>
                             ))}

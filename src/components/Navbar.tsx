@@ -29,6 +29,11 @@ const NavbarItems : NavbarItem[] = [
         sectionId: 'programs'
     },
     {
+        title: 'Курсы',
+        link: '/courses',
+        sectionId: 'courses'
+    },
+    {
         title: 'Преподаватели',
         link: '/teachers',
         sectionId: 'professors'

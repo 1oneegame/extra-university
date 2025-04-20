@@ -77,7 +77,7 @@ const courses = [
     duration: "3 месяца",
     schedule: "Вечерняя форма/онлайн",
     description: "Изучите современную веб-разработку с использованием JavaScript, React и Node.js. Создавайте интерактивные веб-приложения с нуля.",
-    image: "/assets/images/extrauniversity-hall.svg",
+    image: "/assets/images/courses/1c.png",
     price: "90 000 ₸",
     features: [
       "24 практических занятия",
@@ -93,7 +93,7 @@ const courses = [
     duration: "4 месяца",
     schedule: "Онлайн, гибкий график",
     description: "Освойте навыки анализа данных, статистики и машинного обучения. Научитесь использовать Python и библиотеки для работы с данными.",
-    image: "/assets/images/extrauniversity-outside.svg",
+    image: "/assets/images/courses/2c.png",
     price: "120 000 ₸",
     features: [
       "30 лекций и практикумов",
@@ -109,7 +109,7 @@ const courses = [
     duration: "2 месяца",
     schedule: "Вечерние занятия/выходные",
     description: "Изучите стратегии цифрового маркетинга, SMM, SEO, контент-маркетинг и аналитику для развития бизнеса в онлайн-среде.",
-    image: "/assets/images/extrauniversity-hall.svg",
+    image: "/assets/images/courses/3c.png",
     price: "75 000 ₸",
     features: [
       "16 интенсивных занятий",
@@ -125,7 +125,7 @@ const courses = [
     duration: "3 месяца",
     schedule: "Гибкий график, онлайн",
     description: "Научитесь создавать интуитивно понятные и эстетически привлекательные интерфейсы. Освойте принципы UX-исследований и UI-дизайна.",
-    image: "/assets/images/extrauniversity-outside.svg",
+    image: "/assets/images/courses/4c.png",
     price: "95 000 ₸",
     features: [
       "24 практических занятия",
@@ -141,7 +141,7 @@ const courses = [
     duration: "2.5 месяца",
     schedule: "Вечерняя форма/онлайн",
     description: "Изучите методологии управления проектами (Agile, Scrum, Kanban) и инструменты для эффективной организации рабочих процессов.",
-    image: "/assets/images/extrauniversity-hall.svg",
+    image: "/assets/images/courses/5c.png",
     price: "85 000 ₸",
     features: [
       "20 интерактивных занятий",
@@ -157,7 +157,7 @@ const courses = [
     duration: "3 месяца",
     schedule: "Выходные дни, смешанный формат",
     description: "Курс охватывает фундаментальные принципы молекулярной биологии, генетики и биохимии с практическими лабораторными занятиями.",
-    image: "/assets/images/extrauniversity-hall.svg",
+    image: "/assets/images/courses/6c.png",
     price: "110 000 ₸",
     features: [
       "18 лекций и 12 лабораторных работ",
@@ -327,9 +327,7 @@ export default function CoursesPage() {
                   className="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="h-48 bg-gray-100 relative flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
+                    <img src={course.image} alt={course.title} className="h-full w-full object-cover" />
                   </div>
                   <div className="flex-1 p-6">
                     <div className="flex justify-between items-start mb-3">

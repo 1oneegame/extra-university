@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import AboutUniversity from "@/components/AboutUniversity";
 import Hero from "@/components/Hero";
 import News from "@/components/News";
@@ -12,9 +12,9 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3
-    }
-  }
+      staggerChildren: 0.3,
+    },
+  },
 };
 
 const itemVariants = {
@@ -23,9 +23,9 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 export default function Home() {
@@ -34,24 +34,25 @@ export default function Home() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      data-oid="zyr8dpu"
     >
-      <motion.div variants={itemVariants}>
-        <Hero/>
+      <motion.div variants={itemVariants} data-oid="zqesbpx">
+        <Hero data-oid="if69vmt" />
       </motion.div>
-      <motion.div variants={itemVariants}>
-        <AboutUniversity/>
+      <motion.div variants={itemVariants} data-oid="ax05:xa">
+        <AboutUniversity data-oid="bo5ddvl" />
       </motion.div>
-      <motion.div variants={itemVariants}>
-        <News/>
+      <motion.div variants={itemVariants} data-oid="b4zlowe">
+        <News data-oid="0lrbfo8" />
       </motion.div>
-      <motion.div variants={itemVariants}>
-        <UniversityIntroduce/>
+      <motion.div variants={itemVariants} data-oid="8mw5olw">
+        <UniversityIntroduce data-oid="_0::af2" />
       </motion.div>
-      <motion.div variants={itemVariants}>
-        <UniversityPrograms/>
+      <motion.div variants={itemVariants} data-oid="78diwdd">
+        <UniversityPrograms data-oid="cb4za7d" />
       </motion.div>
-      <motion.div variants={itemVariants}>
-        <Professors/>
+      <motion.div variants={itemVariants} data-oid="hifr7_4">
+        <Professors data-oid="k9jl7:_" />
       </motion.div>
     </motion.div>
   );

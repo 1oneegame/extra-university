@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 
 type Props = {
-  photo: string
-  name: string
-  position: string
-  description: string[]
-}
+  photo: string;
+  name: string;
+  position: string;
+  description: string[];
+};
 
 export const TeacherCard = ({ photo, name, position, description }: Props) => {
   return (
@@ -29,5 +29,5 @@ export const TeacherCard = ({ photo, name, position, description }: Props) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
